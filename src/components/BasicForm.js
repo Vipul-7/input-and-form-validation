@@ -35,9 +35,11 @@ const BasicForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(enteredFn);
-    console.log(enteredLn);
-    console.log(enteredEmail);
+
+    if(!formIsValid)
+    return ;
+
+    console.log(enteredFn,enteredLn,enteredEmail);
 
     resetFn();
     resetLn();
